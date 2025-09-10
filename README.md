@@ -1,19 +1,118 @@
-# [Swift](https://swift-ai.vercel.app)
+<div align="center">
+	<h1>VA(general purpose): Fast, Open-Source Voice Assistant</h1>
+	<p>
+		<b>Author:</b> Subhadeep Paul<br>
+		<b>Powered by:</b> Groq, Cartesia, Vercel
+	</p>
+</div>
 
-Swift is a fast AI voice assistant.
+---
 
--   [Groq](https://groq.com) is used for fast inference of [OpenAI Whisper](https://github.com/openai/whisper) (for transcription) and [Meta Llama 3](https://llama.meta.com/llama3/) (for generating the text response).
--   [Cartesia](https://cartesia.ai)'s [Sonic](https://cartesia.ai/sonic) voice model is used for fast speech synthesis, which is streamed to the frontend.
--   [VAD](https://www.vad.ricky0123.com/) is used to detect when the user is talking, and run callbacks on speech segments.
--   The app is a [Next.js](https://nextjs.org) project written in TypeScript and deployed to [Vercel](https://vercel.com).
+## 🚀 Overview
 
-Thank you to the teams at Groq and Cartesia for providing access to their APIs for this demo!
+<b>VA(general purpose)</b> is a blazing-fast, open-source voice assistant built with Next.js, React, and TypeScript. It leverages on-device Voice Activity Detection (VAD), Groq LLMs, and modern web technologies to deliver a seamless, privacy-friendly conversational experience—right in your browser.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fai-ng%2Fswift&env=GROQ_API_KEY,CARTESIA_API_KEY&envDescription=Groq%20and%20Cartesia's%20APIs%20are%20used%20for%20transcription%2C%20text%20generation%2C%20and%20speech%20synthesis.&project-name=swift&repository-name=swift&demo-title=Swift&demo-description=A%20fast%2C%20open-source%20voice%20assistant%20powered%20by%20Groq%2C%20Cartesia%2C%20and%20Vercel.&demo-url=https%3A%2F%2Fswift-ai.vercel.app&demo-image=https%3A%2F%2Fswift-ai.vercel.app%2Fopengraph-image.png)
+---
 
-## Developing
+## ✨ Features
 
--   Clone the repository
--   Copy `.env.example` to `.env.local` and fill in the environment variables.
--   Run `pnpm install` to install dependencies.
--   Run `pnpm dev` to start the development server.
+- 🎤 **Real-time Voice Input**: Uses on-device VAD for instant speech detection and transcription.
+- 🤖 **AI-Powered Responses**: Integrates with Groq LLMs for natural, context-aware conversations.
+- 🖥️ **Modern UI**: Clean, responsive interface with Tailwind CSS and custom icons.
+- 🔒 **Privacy-First**: Audio is processed locally before being sent for transcription.
+- ⚡ **Fast & Lightweight**: Optimized for speed and low resource usage.
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 15](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Groq SDK](https://github.com/groq/groq-sdk)
+- [onnxruntime-web](https://www.npmjs.com/package/onnxruntime-web)
+- [@ricky0123/vad-react](https://github.com/ricky0123/vad)
+- [Vercel Analytics](https://vercel.com/analytics)
+
+---
+
+## 🚦 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ai-ng/VA(general purpose).git
+cd VA(general purpose)
+```
+
+### 2. Install Dependencies
+
+Using [pnpm](https://pnpm.io/):
+
+```bash
+pnpm install
+```
+
+Or use `npm install` or `yarn` if you prefer.
+
+### 3. Run the Development Server
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to use VA(general purpose) in your browser.
+
+---
+
+## 🧩 Project Structure
+
+```
+├── app/
+│   ├── api/           # API routes (voice transcription, chat)
+│   ├── lib/           # Custom hooks and UI components
+│   ├── globals.css    # Global styles (Tailwind)
+│   ├── layout.tsx     # App layout
+│   └── page.tsx       # Main UI
+├── public/            # Static assets
+├── package.json       # Project metadata & scripts
+├── tailwind.config.ts # Tailwind CSS config
+└── ...
+```
+
+---
+
+## 🗣️ Usage
+
+1. Click the microphone button to start speaking.
+2. Speak your query—VA(general purpose) will detect your voice and transcribe it automatically.
+3. Get instant, AI-powered responses in natural language.
+
+---
+
+## 🧪 Scripts
+
+- `pnpm dev` — Start development server
+- `pnpm build` — Build for production
+- `pnpm start` — Start production server
+- `pnpm lint` — Lint codebase
+
+---
+
+## 📦 Deployment
+
+Deploy easily to [Vercel](https://vercel.com/) or your preferred platform. See `vercel.json` for region config.
+
+---
+
+## 🙏 Credits
+
+- **Author:** Subhadeep Paul
+- **Core Tech:** Groq, Cartesia, Vercel, Ricky0123 VAD, ONNX, Tailwind CSS
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
